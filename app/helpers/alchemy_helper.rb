@@ -1,7 +1,6 @@
 module AlchemyHelper
 	@base = "http://access.alchemyapi.com/calls/url"
-	@apikey = "3ac44bf7795811504bef8447a9b3fc10e12262ae"
-
+	@apikey = funkey	
 	module_function
 	def overall_sentiment(url)
 		texts_url = "#{@base}/URLGetTextSentiment?url=#{url}&apikey=#{@apikey}&outputMode=json"

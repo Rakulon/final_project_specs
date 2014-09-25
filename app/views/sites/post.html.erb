@@ -20,26 +20,26 @@
 
 var data = [
     {
-        value: 200,
+        value: <%= @negative_score %>,
         color:"#F7464A",
         highlight: "#FF5A5E",
         label: "Negative"
     },
     {
-        value: 275,
+        value: <%= @positive_score %>,
         color: "#46BFBD",
         highlight: "#5AD3D1",
         label: "Positive"
     },
     {
-        value: 100,
+        value: <%= @neutral_score %>,
         color: "#FDB45C",
         highlight: "#FFC870",
         label: "Neutral"
     }
 ];
 var data2 = {
-    labels: ["City", "Country", "Person", "Crime", "Technology", "Organization", "TwitterHandle", "FieldTerminology","OperatingSystem"],
+    labels: ["City", "Person", "Country", "Crime", "Company", "Organization", "FieldTerminology", "Technology", "OperatingSystem", "TwitterHandle"],
     datasets: [
         {
             label: "My First dataset",
@@ -49,18 +49,8 @@ var data2 = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 90, 81, 56, 55, 40]
+            data: [<%= @type_scores["City"] %>,<%= @type_scores["Person"] %>,<%= @type_scores["Country"] %>,<%= @type_scores["Crime"] %>,<%= @type_scores["Company"] %>,<%= @type_scores["Organization"] %>,<%= @type_scores["FieldTerminology"] %>, <%= @type_scores["Technology"] %>, <%= @type_scores["OperatingSystem"] %>, <%= @type_scores["TwitterHandle"] %>]
         },
-        {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 96, 27, 100]
-        }
     ]
 };
 	// Get context with jQuery - using jQuery's .get() method.

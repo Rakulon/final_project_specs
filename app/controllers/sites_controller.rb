@@ -22,15 +22,29 @@ class SitesController < ApplicationController
 	@entities = AlchemyHelper.entities(url)
 	logger.info("entities #{@entities}")
 
+
+	@positive_score = 0
+	@negative_score = 0
+	@neutral_score = 0
+	@type_scores = {"City" => 0, "Person" => 0, "Country" => 0, "Crime" => 0, "Company" => 0, "Organization" => 0, "FieldTerminology" => 0, "Technology" => 0, "OperatingSystem" => 0, "TwitterHandle" => 0}
+	
 	@copy = @entities.map do |entity|
 		entity_type = entity["type"]
-		# entity_relevance = entity["relevance"]
 		entity_sentiment = entity["sentiment"]["type"]
+		if entity_sentiment == "positive" then @positive_score+=1 end
+		if entity_sentiment == "negative" then @negative_score+=1 end
+		if entity_sentiment == "neutral" then @neutral_score+=1 end
+		#entity_relevance = entity["relevance"]
+		#entity_score = entity["score"]
+
+		if @type_scores[entity_type] then
+		@type_scores[entity_type] += 1
+		end
 		entity_text = entity["text"]
 		
 		text(handle, entity_type, entity_sentiment, entity_text)
 	end
-
+	@number_copy = @copy.select { |score| score != nil  }
 	@filtered_copy = @copy.select { |x| x != nil }
 	@handle = handle
 
