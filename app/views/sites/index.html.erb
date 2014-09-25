@@ -1,11 +1,64 @@
-<form action="sites/post" method="post">
-<select name="source">
+<header class="jumbotron hero-spacer" >
+<form action="/sites/post" method="post" style="text-align: center;">
+<select name="source" id="form-source">
   <option value="twitter">Twitter</option>
   <option value="facebook">Facebook</option>
-  <option value="instagram">Instagram</option>
+  <option value="linkedin">Linkedin</option>
 </select>
-<input type="text" name="handle" placeholder="enter user handle">
-<input type="submit">
-
-
+<br><br>
+<input type="text" name="handle" placeholder="enter user handle" id="form-handle" style="text-align: center;">
+<input type="submit" id="form-submit" style="color: green; background: white">
 </form>
+
+</header>
+
+
+<h3 class="jumbotron hero-spacer" style="background-color: darkgrey; text-align: center"> Select a social media type and enter a user handle.</h3>
+
+<div class="container">
+	<div class="row">
+		
+		<div class="col-sm-6">
+			<div id="target" style="text-align: center;"></div>
+		</div>
+
+
+		<div class="col-sm-6">
+			<div id="charts" style="text-align: center;"> 
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+				<canvas id="myChart" width="400" height="400"></canvas>
+				<canvas id="myChart2" width="400" height="400"></canvas>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<script type="text/javascript" >
+	$(function(){
+		$("#form-submit").click(function(evt){
+			evt.preventDefault();
+			var formsource = $("#form-source").val(); 
+			var formhandle = $("#form-handle").val(); 
+			$( "#target" ).load( "/sites/post", {source: formsource, handle: formhandle} );
+
+			// $.post("/sites/post", {source: formsource, handle: formhandle}, function(data){
+
+			//  });
+		});
+
+	});
+</script>
+
+
+

@@ -10,8 +10,6 @@ module AlchemyHelper
 	end
 
 
-
-
 	def entities(url)
 		entities_url = "#{@base}/URLGetRankedNamedEntities?url=#{url}&apikey=#{@apikey}&outputMode=json&sentiment=1"
 		request = Typhoeus.get(entities_url)
