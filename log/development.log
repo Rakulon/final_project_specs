@@ -53216,3 +53216,175 @@ Started GET "/assets/sites.js?body=1" for 127.0.0.1 at 2014-09-24 21:43:49 -0700
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-24 21:43:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-24 22:18:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SitesController#landing as HTML
+  Rendered sites/landing.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.erb (1.9ms)
+Completed 200 OK in 226ms (Views: 176.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/Chart.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/sites.css?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/sites.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-09-24 22:18:33 -0700
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2014-09-24 22:18:34 -0700
+Processing by SitesController#index as HTML
+  Rendered sites/index.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/sites.css?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/Chart.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/sites.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-24 22:18:35 -0700
+
+
+Started POST "/sites/post" for 127.0.0.1 at 2014-09-24 22:18:37 -0700
+Processing by SitesController#post as HTML
+  Parameters: {"source"=>"twitter", "handle"=>"JohnnieWalkerUS"}
+ETHON: Libcurl initialized
+ETHON: performed EASY effective_url=http://access.alchemyapi.com/calls/url/URLGetTextSentiment?url=http://twitter.com/JohnnieWalkerUS&apikey=&outputMode=json response_code=200 return_code=ok total_time=0.240239
+Completed 500 Internal Server Error in 242ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/helpers/alchemy_helper.rb:8:in `overall_sentiment'
+  app/controllers/sites_controller.rb:21:in `post'
+
+
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (27.2ms)
+
+
+Started POST "/sites/post" for 127.0.0.1 at 2014-09-24 22:18:45 -0700
+Processing by SitesController#post as HTML
+  Parameters: {"source"=>"twitter", "handle"=>"jackdanger"}
+ETHON: performed EASY effective_url=http://access.alchemyapi.com/calls/url/URLGetTextSentiment?url=http://twitter.com/jackdanger&apikey=&outputMode=json response_code=200 return_code=ok total_time=0.100956
+Completed 500 Internal Server Error in 102ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/helpers/alchemy_helper.rb:8:in `overall_sentiment'
+  app/controllers/sites_controller.rb:21:in `post'
+
+
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/Williamcurotto/.rvm/gems/ruby-2.1.2@global/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+Processing by SitesController#landing as HTML
+  Rendered sites/landing.html.erb within layouts/application (0.1ms)
+  Rendered shared/_navbar.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/sites.css?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/Chart.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/sites.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+
+
+Started GET "/sites/index" for 127.0.0.1 at 2014-09-24 22:19:01 -0700
+Processing by SitesController#index as HTML
+  Rendered sites/index.html.erb within layouts/application (0.1ms)
+  Rendered shared/_navbar.erb (0.0ms)
+Completed 200 OK in 75ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/sites.css?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/Chart.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/sites.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-24 22:19:02 -0700
